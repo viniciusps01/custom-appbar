@@ -77,14 +77,3 @@ class _CustomStatefullAppBarState extends State<CustomStatefullAppBar> {
     );
   }
 }
-
-class AppBarCustomizada extends StatelessWidget {
-  const AppBarCustomizada({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
