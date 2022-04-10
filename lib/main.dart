@@ -10,20 +10,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutternatico',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Hello'),
-        ),
+        appBar: CustomStatelessAppBar(),
       ),
     );
   }
 }
 
-class CustomStatelessAppBar extends StatelessWidget {
+class CustomStatelessAppBar extends StatelessWidget
+    implements PreferredSizeWidget {
   const CustomStatelessAppBar({Key? key}) : super(key: key);
 
   @override
