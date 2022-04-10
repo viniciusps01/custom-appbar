@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
+      home: const Scaffold(
         appBar: CustomStatelessAppBar(),
       ),
     );
@@ -28,9 +28,52 @@ class CustomStatelessAppBar extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(
+        MediaQuery.of(context).viewPadding.top,
+      ),
       height: 100,
       color: Colors.blue,
-      child: const Text('Flutternatico'),
+      child: const Text(
+        'Flutternatico',
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+        ),
+      ),
+    );
+  }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 20);
+}
+
+class CustomStatefullAppBar extends StatefulWidget
+    implements PreferredSizeWidget {
+  const CustomStatefullAppBar({Key? key}) : super(key: key);
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 20);
+
+  @override
+  State<CustomStatefullAppBar> createState() => _CustomStatefullAppBarState();
+}
+
+class _CustomStatefullAppBarState extends State<CustomStatefullAppBar> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(
+        MediaQuery.of(context).viewPadding.top,
+      ),
+      height: 100,
+      color: Colors.blue,
+      child: const Text(
+        'Flutternatico',
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+        ),
+      ),
     );
   }
 }
