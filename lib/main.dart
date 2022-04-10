@@ -22,3 +22,16 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+class CustomStatelessAppBar extends StatelessWidget {
+  const CustomStatelessAppBar({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 100,
+      color: Colors.blue,
+      child: const Text('Flutternatico'),
+    );
+  }
+}
