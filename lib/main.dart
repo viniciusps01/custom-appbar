@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const Scaffold(
-        appBar: CustomStatelessAppBar(),
+        appBar: CustomStatefullAppBar(),
       ),
     );
   }
@@ -28,8 +28,8 @@ class CustomStatelessAppBar extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(
-        MediaQuery.of(context).viewPadding.top,
+      padding: EdgeInsets.only(
+        top: MediaQuery.of(context).viewPadding.top,
       ),
       height: 100,
       color: Colors.blue,
@@ -62,11 +62,11 @@ class _CustomStatefullAppBarState extends State<CustomStatefullAppBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(
-        MediaQuery.of(context).viewPadding.top,
+      padding: EdgeInsets.only(
+        top: MediaQuery.of(context).viewPadding.top,
       ),
       height: 100,
-      color: Colors.blue,
+      color: Colors.pink,
       child: const Text(
         'Flutternatico',
         style: TextStyle(
